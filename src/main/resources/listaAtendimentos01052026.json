@@ -1,0 +1,122 @@
+[
+    {
+        "seqAtendimento": 1429468,
+        "alteradoEm": "2026-01-05T20:45:00.000Z",
+        "nomePaciente": "MARIA HELOISA FERREIRA MARTINS",
+        "prontuario": 21724703,
+        "especialidade": "PNEUMOLOGIA",
+        "altaAmbulatorial": false
+    },
+    {
+        "seqAtendimento": 1444232,
+        "alteradoEm": "2026-01-05T23:57:17.554Z",
+        "nomePaciente": "TATILA TAMIRES SANTOS DO NASCIMENTO",
+        "prontuario": 21196373,
+        "especialidade": "ENDOCRINOLOGIA",
+        "altaAmbulatorial": true
+    },
+    {
+        "seqAtendimento": 1444214,
+        "alteradoEm": "2026-01-05T23:43:38.246Z",
+        "nomePaciente": "MARIA TALIANE DA SILVA VIEIRA",
+        "prontuario": 20616389,
+        "especialidade": "PNEUMOLOGIA",
+        "altaAmbulatorial": false
+    },
+    {
+        "seqAtendimento": 1434812,
+        "alteradoEm": "2026-01-05T16:38:39.903Z",
+        "nomePaciente": "ADRIANE GONCALVES DA SILVA",
+        "prontuario": 20766044,
+        "especialidade": "ENDOCRINOLOGIA",
+        "altaAmbulatorial": true
+    },
+    {
+        "seqAtendimento": 1434836,
+        "alteradoEm": "2026-01-05T16:15:00.000Z",
+        "nomePaciente": "CICERA VALE DOS SANTOS",
+        "prontuario": 5751094,
+        "especialidade": "PNEUMOLOGIA",
+        "altaAmbulatorial": true
+    },
+    {
+        "seqAtendimento": 1435067,
+        "alteradoEm": "2026-01-05T16:00:00.000Z",
+        "nomePaciente": "MARIA IVANEIDE SOARES DA SILVA CARDOSO",
+        "prontuario": 12504015,
+        "especialidade": "ENDOCRINOLOGIA",
+        "altaAmbulatorial": true
+    },
+    {
+        "seqAtendimento": 1444219,
+        "alteradoEm": "2026-01-05T23:28:17.950Z",
+        "nomePaciente": "FRANCISCA BIANCA SILVA LIMA",
+        "prontuario": 21856455,
+        "especialidade": "PNEUMOLOGIA",
+        "altaAmbulatorial": true
+    },
+    {
+        "seqAtendimento": 1443969,
+        "alteradoEm": "2026-01-05T23:27:24.824Z",
+        "nomePaciente": "YASMIM BARBOSA DA SILVA",
+        "prontuario": 21842604,
+        "especialidade": "ENDOCRINOLOGIA",
+        "altaAmbulatorial": true
+    },
+    {
+        "seqAtendimento": 1444138,
+        "alteradoEm": "2026-01-05T23:22:31.273Z",
+        "nomePaciente": "EDILANIA JULIO MEDEIROS",
+        "prontuario": 14392120,
+        "especialidade": "PNEUMOLOGIA",
+        "altaAmbulatorial": true
+    },
+    {
+        "seqAtendimento": 1444222,
+        "alteradoEm": "2026-01-05T23:21:22.790Z",
+        "nomePaciente": "ANA KAROLINE FREIRE MALVEIRA",
+        "prontuario": 20210977,
+        "especialidade": "ENDOCRINOLOGIA",
+        "altaAmbulatorial": true
+    },
+    {
+        "seqAtendimento": 1444218,
+        "alteradoEm": "2026-01-05T23:16:22.065Z",
+        "nomePaciente": "VITORIA LEMOS DE SOUSA",
+        "prontuario": 21856638,
+        "especialidade": "PNEUMOLOGIA",
+        "altaAmbulatorial": true
+    },
+    {
+        "seqAtendimento": 1444220,
+        "alteradoEm": "2026-01-05T23:11:39.181Z",
+        "nomePaciente": "REBECA GOMES BARBOSA",
+        "prontuario": 21845565,
+        "especialidade": "ENDOCRINOLOGIA",
+        "altaAmbulatorial": true
+    },
+    {
+        "seqAtendimento": 1444178,
+        "alteradoEm": "2026-01-05T22:59:18.851Z",
+        "nomePaciente": "FRANCISCA DRIELI SANTOS DA SILVA",
+        "prontuario": 13875414,
+        "especialidade": "PNEUMOLOGIA",
+        "altaAmbulatorial": true
+    },
+    {
+        "seqAtendimento": 1444188,
+        "alteradoEm": "2026-01-05T22:56:50.282Z",
+        "nomePaciente": "DAIANE DA SILVA PONTES",
+        "prontuario": 20252763,
+        "especialidade": "ENDOCRINOLOGIA",
+        "altaAmbulatorial": false
+    },
+    {
+        "seqAtendimento": 1444206,
+        "alteradoEm": "2026-01-05T22:51:03.402Z",
+        "nomePaciente": "CAMILA VITORIA DA SILVA DE CASTRO",
+        "prontuario": 21817549,
+        "especialidade": "PNEUMOLOGIA",
+        "altaAmbulatorial": true
+    }
+]

@@ -1,0 +1,973 @@
+{
+  "1429468": {
+    "numero": 1429468,
+    "dtConsulta": "2026-03-10T14:30:00Z",
+    "paciente": {
+      "prontuario": 21724703,
+      "nome": "MARIA HELOISA FERREIRA MARTINS",
+      "dtNascimento": "1995-05-20T00:00:00Z",
+      "sexo": "F",
+      "nomeMae": "JOSEFA FERREIRA MARTINS",
+      "cpf": "123.456.789-00",
+      "cns": "700012345678901",
+      "enderecos": [
+        {
+          "logradouro": "Rua das Flores",
+          "nroLogradouro": 123,
+          "bairro": "Centro",
+          "cidade": { "nome": "Fortaleza" },
+          "uf": { "sigla": "CE" },
+          "bclCloCep": 60000000
+        }
+      ],
+      "contatos": [
+        {
+          "ddd": 85,
+          "nroFone": "98888-7777"
+        }
+      ]
+    },
+    "grade": {
+      "especialidade": {
+        "nomeEspecialidade": "PNEUMOLOGIA"
+      },
+      "equipe": {
+        "nome": "EQUIPE DE PNEUMOLOGIA ADULTO"
+      },
+      "preceptor": {
+        "pessoa": {
+          "nome": "DR. RICARDO MENDES"
+        },
+        "creMec": "123456",
+        "rqe": "654321"
+      }
+    },
+    "atendimentos": [
+      {
+        "seq": 1429468
+      }
+    ],
+    "anamneses": [
+      {
+        "itens": [
+          {
+            "descricao": "#HDA: Paciente com quadro de tosse persistente e dispneia aos esforços.\n#EXAME FISICO: Murmúrio vesicular presente com sibilos esparsos.\n#CONDUTA: Solicitado espirometria e RX de tórax. Retorno em 15 dias."
+          }
+        ]
+      }
+    ],
+    "cidsPrimarios": [
+      {
+        "cid": {
+          "codigo": "J45.9",
+          "descricao": "Asma não especificada"
+        }
+      }
+    ]
+  },
+  "1444232": {
+    "numero": 1444232,
+    "dtConsulta": "2026-03-10T09:00:00Z",
+    "paciente": {
+      "prontuario": 21196373,
+      "nome": "TATILA TAMIRES SANTOS DO NASCIMENTO",
+      "dtNascimento": "1990-10-15T00:00:00Z",
+      "sexo": "F",
+      "nomeMae": "MARIA DO NASCIMENTO",
+      "cpf": "987.654.321-11",
+      "cns": "899912345678902",
+      "enderecos": [
+        {
+          "logradouro": "Avenida Beira Mar",
+          "nroLogradouro": 500,
+          "complLogradouro": "Apt 202",
+          "bairro": "Meireles",
+          "cidade": { "nome": "Fortaleza" },
+          "uf": { "sigla": "CE" },
+          "bclCloCep": 60165121
+        }
+      ],
+      "contatos": [
+        {
+          "ddd": 85,
+          "nroFone": "99999-0000"
+        }
+      ]
+    },
+    "grade": {
+      "especialidade": {
+        "nomeEspecialidade": "ENDOCRINOLOGIA"
+      },
+      "equipe": {
+        "nome": "EQUIPE DE ENDOCRINOLOGIA E METABOLOGIA"
+      },
+      "preceptor": {
+        "pessoa": {
+          "nome": "DRA. SIMONE COSTA"
+        },
+        "creMec": "987654"
+      }
+    },
+    "atendimentos": [
+      {
+        "seq": 1444232
+      }
+    ],
+    "anamneses": [
+      {
+        "itens": [
+          {
+            "descricao": "#HDA: Paciente com Diabetes Mellitus Tipo 1 em acompanhamento.\n#EXAME FISICO: Glicemia capilar 180 mg/dL.\n#CONDUTA: Ajuste de dose de insulina glargina. Retorno em 30 dias."
+          }
+        ]
+      }
+    ],
+    "cidsPrimarios": [
+      {
+        "cid": {
+          "codigo": "E10.9",
+          "descricao": "Diabetes mellitus insulinodependente - sem complicações"
+        }
+      }
+    ]
+  },
+  "1444214": {
+    "numero": 1444214,
+    "dtConsulta": "2026-03-10T11:15:00Z",
+    "paciente": {
+      "prontuario": 20616389,
+      "nome": "MARIA TALIANE DA SILVA VIEIRA",
+      "dtNascimento": "1988-02-28T00:00:00Z",
+      "sexo": "F",
+      "nomeMae": "ANA DA SILVA VIEIRA",
+      "cpf": "456.789.123-22",
+      "cns": "755512345678903",
+      "enderecos": [
+        {
+          "logradouro": "Rua Major Facundo",
+          "nroLogradouro": 101,
+          "bairro": "Centro",
+          "cidade": { "nome": "Fortaleza" },
+          "uf": { "sigla": "CE" },
+          "bclCloCep": 60025100
+        }
+      ],
+      "contatos": [
+        {
+          "ddd": 85,
+          "nroFone": "97777-6666"
+        }
+      ]
+    },
+    "grade": {
+      "especialidade": {
+        "nomeEspecialidade": "PNEUMOLOGIA"
+      },
+      "equipe": {
+        "nome": "EQUIPE DE PNEUMOLOGIA GERAL"
+      },
+      "preceptor": {
+        "pessoa": {
+          "nome": "DR. MARCOS PAIVA"
+        },
+        "creMec": "456123",
+        "rqe": "321456"
+      }
+    },
+    "atendimentos": [
+      {
+        "seq": 1444214
+      }
+    ],
+    "anamneses": [
+      {
+        "itens": [
+          {
+            "descricao": "#HDA: Paciente com diagnóstico de DPOC, em uso de broncodilatadores.\n#EXAME FISICO: MV reduzido globalmente, sem ruídos adventícios no momento.\n#CONDUTA: Mantido tratamento atual. Solicitado nova espirometria."
+          }
+        ]
+      }
+    ],
+    "cidsPrimarios": [
+      {
+        "cid": {
+          "codigo": "J44.9",
+          "descricao": "Doença pulmonar obstrutiva crônica não especificada"
+        }
+      }
+    ]
+  },
+  "1434812": {
+    "numero": 1434812,
+    "dtConsulta": "2026-03-10T14:00:00Z",
+    "paciente": {
+      "prontuario": 20766044,
+      "nome": "ADRIANE GONCALVES DA SILVA",
+      "dtNascimento": "1985-07-12T00:00:00Z",
+      "sexo": "F",
+      "nomeMae": "MARIA GONCALVES DA SILVA",
+      "cpf": "111.222.333-44",
+      "cns": "711112345678904",
+      "enderecos": [
+        {
+          "logradouro": "Rua Padre Valdevino",
+          "nroLogradouro": 1500,
+          "bairro": "Aldeota",
+          "cidade": { "nome": "Fortaleza" },
+          "uf": { "sigla": "CE" },
+          "bclCloCep": 60135041
+        }
+      ],
+      "contatos": [
+        {
+          "ddd": 85,
+          "nroFone": "96666-5555"
+        }
+      ]
+    },
+    "grade": {
+      "especialidade": {
+        "nomeEspecialidade": "ENDOCRINOLOGIA"
+      },
+      "equipe": {
+        "nome": "EQUIPE DE ENDOCRINOLOGIA ADULTO"
+      },
+      "preceptor": {
+        "pessoa": {
+          "nome": "DRA. PAULA MOURA"
+        },
+        "creMec": "112233"
+      }
+    },
+    "atendimentos": [
+      {
+        "seq": 1434812
+      }
+    ],
+    "anamneses": [
+      {
+        "itens": [
+          {
+            "descricao": "#HDA: Paciente com diabetes tipo 2 em acompanhamento.\n#EXAME FISICO: Obesa, PA 130/85.\n#CONDUTA: Ajuste de dose de metformina. Retorno em 60 dias."
+          }
+        ]
+      }
+    ],
+    "cidsPrimarios": [
+      {
+        "cid": {
+          "codigo": "E11.9",
+          "descricao": "Diabetes mellitus nao-insulinodependente - sem complicacoes"
+        }
+      }
+    ]
+  },
+  "1434836": {
+    "numero": 1434836,
+    "dtConsulta": "2026-03-10T15:00:00Z",
+    "paciente": {
+      "prontuario": 5751094,
+      "nome": "CICERA VALE DOS SANTOS",
+      "dtNascimento": "1962-03-05T00:00:00Z",
+      "sexo": "F",
+      "nomeMae": "ANTONIA VALE DOS SANTOS",
+      "cpf": "555.666.777-88",
+      "cns": "788812345678905",
+      "enderecos": [
+        {
+          "logradouro": "Rua Joao Carvalho",
+          "nroLogradouro": 800,
+          "bairro": "Aldeota",
+          "cidade": { "nome": "Fortaleza" },
+          "uf": { "sigla": "CE" },
+          "bclCloCep": 60140140
+        }
+      ],
+      "contatos": [
+        {
+          "ddd": 85,
+          "nroFone": "95555-4444"
+        }
+      ]
+    },
+    "grade": {
+      "especialidade": {
+        "nomeEspecialidade": "PNEUMOLOGIA"
+      },
+      "equipe": {
+        "nome": "EQUIPE DE PNEUMOLOGIA ADULTO"
+      },
+      "preceptor": {
+        "pessoa": {
+          "nome": "DR. JOSE ALMEIDA"
+        },
+        "creMec": "445566"
+      }
+    },
+    "atendimentos": [
+      {
+        "seq": 1434836
+      }
+    ],
+    "anamneses": [
+      {
+        "itens": [
+          {
+            "descricao": "#HDA: Paciente em investigação de nódulo pulmonar incidental em TC.\n#EXAME FISICO: Regular estado geral.\n#CONDUTA: Solicitado biópsia guiada por TC. Retorno com resultado."
+          }
+        ]
+      }
+    ],
+    "cidsPrimarios": [
+      {
+        "cid": {
+          "codigo": "R91",
+          "descricao": "Achados anormais de exames de imagem dos pulmões"
+        }
+      }
+    ]
+  },
+  "1435067": {
+    "numero": 1435067,
+    "dtConsulta": "2026-03-10T16:00:00Z",
+    "paciente": {
+      "prontuario": 12504015,
+      "nome": "MARIA IVANEIDE SOARES DA SILVA CARDOSO",
+      "dtNascimento": "1975-11-22T00:00:00Z",
+      "sexo": "F",
+      "nomeMae": "TEREZA SOARES DA SILVA",
+      "cpf": "777.888.999-00",
+      "cns": "799912345678906",
+      "enderecos": [
+        {
+          "logradouro": "Avenida Santos Dumont",
+          "nroLogradouro": 3000,
+          "bairro": "Aldeota",
+          "cidade": { "nome": "Fortaleza" },
+          "uf": { "sigla": "CE" },
+          "bclCloCep": 60150162
+        }
+      ],
+      "contatos": [
+        {
+          "ddd": 85,
+          "nroFone": "94444-3333"
+        }
+      ]
+    },
+    "grade": {
+      "especialidade": {
+        "nomeEspecialidade": "ENDOCRINOLOGIA"
+      },
+      "equipe": {
+        "nome": "EQUIPE DE ENDOCRINOLOGIA ADULTO"
+      },
+      "preceptor": {
+        "pessoa": {
+          "nome": "DRA. CLAUDIA LIMA"
+        },
+        "creMec": "778899"
+      }
+    },
+    "atendimentos": [
+      {
+        "seq": 1435067
+      }
+    ],
+    "anamneses": [
+      {
+        "itens": [
+          {
+            "descricao": "#HDA: Paciente com nodulo de tireoide em investigacao.\n#EXAME FISICO: Nodulo palpavel em lobo esquerdo.\n#CONDUTA: Solicitado PAAF. Retorno com resultado."
+          }
+        ]
+      }
+    ],
+    "cidsPrimarios": [
+      {
+        "cid": {
+          "codigo": "E04.1",
+          "descricao": "Nodulo tireoidiano atoxico solitario"
+        }
+      }
+    ]
+  },
+  "1444219": {
+    "numero": 1444219,
+    "dtConsulta": "2026-03-11T10:00:00Z",
+    "paciente": {
+      "prontuario": 21856455,
+      "nome": "FRANCISCA BIANCA SILVA LIMA",
+      "dtNascimento": "1992-08-15T00:00:00Z",
+      "sexo": "F",
+      "nomeMae": "ANTONIA SILVA LIMA",
+      "cpf": "222.333.444-55",
+      "cns": "722212345678907",
+      "enderecos": [
+        {
+          "logradouro": "Rua Dom Lino",
+          "nroLogradouro": 10,
+          "bairro": "Parquelândia",
+          "cidade": { "nome": "Fortaleza" },
+          "uf": { "sigla": "CE" },
+          "bclCloCep": 60450230
+        }
+      ],
+      "contatos": [
+        {
+          "ddd": 85,
+          "nroFone": "98765-4321"
+        }
+      ]
+    },
+    "grade": {
+      "especialidade": {
+        "nomeEspecialidade": "PNEUMOLOGIA"
+      },
+      "equipe": {
+        "nome": "EQUIPE DE PNEUMOLOGIA INTERVENCIONISTA"
+      },
+      "preceptor": {
+        "pessoa": {
+          "nome": "DR. FABIO JORGE"
+        },
+        "creMec": "556677"
+      }
+    },
+    "atendimentos": [
+      {
+        "seq": 1444219
+      }
+    ],
+    "anamneses": [
+      {
+        "itens": [
+          {
+            "descricao": "#HDA: Paciente em pós-operatório de drenagem de derrame pleural.\n#EXAME FISICO: Pulmão em expansão, dreno removido ontem.\n#CONDUTA: Analgesia e retorno em 7 dias para revisão."
+          }
+        ]
+      }
+    ],
+    "cidsPrimarios": [
+      {
+        "cid": {
+          "codigo": "J90",
+          "descricao": "Derrame pleural não classificado em outra parte"
+        }
+      }
+    ]
+  },
+  "1443969": {
+    "numero": 1443969,
+    "dtConsulta": "2026-03-11T13:30:00Z",
+    "paciente": {
+      "prontuario": 21842604,
+      "nome": "YASMIM BARBOSA DA SILVA",
+      "dtNascimento": "1998-11-02T00:00:00Z",
+      "sexo": "F",
+      "nomeMae": "RITA BARBOSA DA SILVA",
+      "cpf": "333.444.555-66",
+      "cns": "733312345678908",
+      "enderecos": [
+        {
+          "logradouro": "Rua Professor Anacleto",
+          "nroLogradouro": 45,
+          "bairro": "Jordão",
+          "cidade": { "nome": "Fortaleza" },
+          "uf": { "sigla": "CE" },
+          "bclCloCep": 60511220
+        }
+      ],
+      "contatos": [
+        {
+          "ddd": 85,
+          "nroFone": "91234-5678"
+        }
+      ]
+    },
+    "grade": {
+      "especialidade": {
+        "nomeEspecialidade": "ENDOCRINOLOGIA"
+      },
+      "equipe": {
+        "nome": "EQUIPE de ENDOCRINOLOGIA FEMININA"
+      },
+      "preceptor": {
+        "pessoa": {
+          "nome": "DRA. HELENA SOUZA"
+        },
+        "creMec": "889900"
+      }
+    },
+    "atendimentos": [
+      {
+        "seq": 1443969
+      }
+    ],
+    "anamneses": [
+      {
+        "itens": [
+          {
+            "descricao": "#HDA: Paciente com síndrome dos ovários policísticos (SOP).\n#EXAME FISICO: Hirsutismo grau leve.\n#CONDUTA: Iniciado anticoncepcional oral e metformina."
+          }
+        ]
+      }
+    ],
+    "cidsPrimarios": [
+      {
+        "cid": {
+          "codigo": "E28.2",
+          "descricao": "Síndrome de ovários policísticos"
+        }
+      }
+    ]
+  },
+  "1444138": {
+    "numero": 1444138,
+    "dtConsulta": "2026-03-11T15:00:00Z",
+    "paciente": {
+      "prontuario": 14392120,
+      "nome": "EDILANIA JULIO MEDEIROS",
+      "dtNascimento": "1982-04-20T00:00:00Z",
+      "sexo": "F",
+      "nomeMae": "MARIA JULIO MEDEIROS",
+      "cpf": "444.555.666-77",
+      "cns": "744412345678909",
+      "enderecos": [
+        {
+          "logradouro": "Rua Tibúrcio Cavalcante",
+          "nroLogradouro": 789,
+          "bairro": "Meireles",
+          "cidade": { "nome": "Fortaleza" },
+          "uf": { "sigla": "CE" },
+          "bclCloCep": 60125100
+        }
+      ],
+      "contatos": [
+        {
+          "ddd": 85,
+          "nroFone": "99887-1122"
+        }
+      ]
+    },
+    "grade": {
+      "especialidade": {
+        "nomeEspecialidade": "PNEUMOLOGIA"
+      },
+      "equipe": {
+        "nome": "EQUIPE DE PNEUMOLOGIA ADULTO"
+      },
+      "preceptor": {
+        "pessoa": {
+          "nome": "ENF. CELINA ROCHA"
+        }
+      }
+    },
+    "atendimentos": [
+      {
+        "seq": 1444138
+      }
+    ],
+    "anamneses": [
+      {
+        "itens": [
+          {
+            "descricao": "#HDA: Paciente tabagista em programa de cessação do fumo.\n#EXAME FISICO: Ansiedade leve, sem alterações na ausculta.\n#CONDUTA: Prescrito bupropiona e adesivos de nicotina."
+          }
+        ]
+      }
+    ],
+    "cidsPrimarios": [
+      {
+        "cid": {
+          "codigo": "F17.2",
+          "descricao": "Transtornos mentais e comportamentais devidos ao uso de fumo - síndrome de dependência"
+        }
+      }
+    ]
+  },
+  "1444222": {
+    "numero": 1444222,
+    "dtConsulta": "2026-03-12T08:30:00Z",
+    "paciente": {
+      "prontuario": 20210977,
+      "nome": "ANA KAROLINE FREIRE MALVEIRA",
+      "dtNascimento": "1996-01-10T00:00:00Z",
+      "sexo": "F",
+      "nomeMae": "JOSEFA FREIRE MALVEIRA",
+      "cpf": "555.666.777-00",
+      "cns": "755512345678910",
+      "enderecos": [
+        {
+          "logradouro": "Rua Pereira de Miranda",
+          "nroLogradouro": 202,
+          "bairro": "Papicu",
+          "cidade": { "nome": "Fortaleza" },
+          "uf": { "sigla": "CE" },
+          "bclCloCep": 60175045
+        }
+      ],
+      "contatos": [
+        {
+          "ddd": 85,
+          "nroFone": "98754-3210"
+        }
+      ]
+    },
+    "grade": {
+      "especialidade": {
+        "nomeEspecialidade": "ENDOCRINOLOGIA"
+      },
+      "equipe": {
+        "nome": "EQUIPE DE ENDOCRINOLOGIA ADULTO"
+      },
+      "preceptor": {
+        "pessoa": {
+          "nome": "DRA. LIA PEIXOTO"
+        }
+      }
+    },
+    "atendimentos": [
+      {
+        "seq": 1444222
+      }
+    ],
+    "anamneses": [
+      {
+        "itens": [
+          {
+            "descricao": "#HDA: Investigação de obesidade grau I.\n#EXAME FISICO: IMC 31 kg/m².\n#CONDUTA: Orientação dietética e solicitado perfil lipídico e glicemia."
+          }
+        ]
+      }
+    ],
+    "cidsPrimarios": [
+      {
+        "cid": {
+          "codigo": "E66.9",
+          "descricao": "Obesidade não especificada"
+        }
+      }
+    ]
+  },
+  "1444218": {
+    "numero": 1444218,
+    "dtConsulta": "2026-03-12T09:15:00Z",
+    "paciente": {
+      "prontuario": 21856638,
+      "nome": "VITORIA LEMOS DE SOUSA",
+      "dtNascimento": "2000-06-25T00:00:00Z",
+      "sexo": "F",
+      "nomeMae": "MARIA LEMOS DE SOUSA",
+      "cpf": "666.777.888-11",
+      "cns": "766612345678911",
+      "enderecos": [
+        {
+          "logradouro": "Rua Monsenhor Catão",
+          "nroLogradouro": 1100,
+          "bairro": "Aldeota",
+          "cidade": { "nome": "Fortaleza" },
+          "uf": { "sigla": "CE" },
+          "bclCloCep": 60135270
+        }
+      ],
+      "contatos": [
+        {
+          "ddd": 85,
+          "nroFone": "91122-3344"
+        }
+      ]
+    },
+    "grade": {
+      "especialidade": {
+        "nomeEspecialidade": "PNEUMOLOGIA"
+      },
+      "equipe": {
+        "nome": "EQUIPE DE ASMA GRAVE"
+      },
+      "preceptor": {
+        "pessoa": {
+          "nome": "DR. MAURICIO LUZ"
+        }
+      }
+    },
+    "atendimentos": [
+      {
+        "seq": 1444218
+      }
+    ],
+    "anamneses": [
+      {
+        "itens": [
+          {
+            "descricao": "#HDA: Paciente com asma persistente grave, dependente de corticoide oral.\n#EXAME FISICO: Sibilos expiratórios presentes.\n#CONDUTA: Avaliado início de imunobiológico. Solicitado IgE total."
+          }
+        ]
+      }
+    ],
+    "cidsPrimarios": [
+      {
+        "cid": {
+          "codigo": "J45.1",
+          "descricao": "Asma intrínseca"
+        }
+      }
+    ]
+  },
+  "1444220": {
+    "numero": 1444220,
+    "dtConsulta": "2026-03-12T10:00:00Z",
+    "paciente": {
+      "prontuario": 21845565,
+      "nome": "REBECA GOMES BARBOSA",
+      "dtNascimento": "1994-03-15T00:00:00Z",
+      "sexo": "F",
+      "nomeMae": "ANA GOMES BARBOSA",
+      "cpf": "777.888.999-22",
+      "cns": "777712345678912",
+      "enderecos": [
+        {
+          "logradouro": "Rua Costa Barros",
+          "nroLogradouro": 2000,
+          "bairro": "Centro",
+          "cidade": { "nome": "Fortaleza" },
+          "uf": { "sigla": "CE" },
+          "bclCloCep": 60160282
+        }
+      ],
+      "contatos": [
+        {
+          "ddd": 85,
+          "nroFone": "94455-6677"
+        }
+      ]
+    },
+    "grade": {
+      "especialidade": {
+        "nomeEspecialidade": "ENDOCRINOLOGIA"
+      },
+      "equipe": {
+        "nome": "EQUIPE DE ENDOCRINOLOGIA ADULTO"
+      },
+      "preceptor": {
+        "pessoa": {
+          "nome": "DRA. PAULA LIMA"
+        }
+      }
+    },
+    "atendimentos": [
+      {
+        "seq": 1444220
+      }
+    ],
+    "anamneses": [
+      {
+        "itens": [
+          {
+            "descricao": "#HDA: Paciente com hiperadrenocorticismo em investigação.\n#EXAME FISICO: Estrias violáceas em abdome.\n#CONDUTA: Solicitado cortisol urinário de 24h."
+          }
+        ]
+      }
+    ],
+    "cidsPrimarios": [
+      {
+        "cid": {
+          "codigo": "E24.9",
+          "descricao": "Síndrome de Cushing não especificada"
+        }
+      }
+    ]
+  },
+  "1444178": {
+    "numero": 1444178,
+    "dtConsulta": "2026-03-12T11:00:00Z",
+    "paciente": {
+      "prontuario": 13875414,
+      "nome": "FRANCISCA DRIELI SANTOS DA SILVA",
+      "dtNascimento": "1989-12-12T00:00:00Z",
+      "sexo": "F",
+      "nomeMae": "MARIA SANTOS DA SILVA",
+      "cpf": "888.999.000-33",
+      "cns": "788812345678913",
+      "enderecos": [
+        {
+          "logradouro": "Rua Silva Jatahy",
+          "nroLogradouro": 50,
+          "bairro": "Meireles",
+          "cidade": { "nome": "Fortaleza" },
+          "uf": { "sigla": "CE" },
+          "bclCloCep": 60165070
+        }
+      ],
+      "contatos": [
+        {
+          "ddd": 85,
+          "nroFone": "93322-1100"
+        }
+      ]
+    },
+    "grade": {
+      "especialidade": {
+        "nomeEspecialidade": "PNEUMOLOGIA"
+      },
+      "equipe": {
+        "nome": "EQUIPE DE PNEUMOLOGIA GERAL"
+      },
+      "preceptor": {
+        "pessoa": {
+          "nome": "DR. ANTONIO CARLOS"
+        }
+      }
+    },
+    "atendimentos": [
+      {
+        "seq": 1444178
+      }
+    ],
+    "anamneses": [
+      {
+        "itens": [
+          {
+            "descricao": "#HDA: Paciente com queixa de apneia do sono grave.\n#EXAME FISICO: Roncos intensos, sonolência diurna.\n#CONDUTA: Solicitado polissonografia e avaliação para CPAP."
+          }
+        ]
+      }
+    ],
+    "cidsPrimarios": [
+      {
+        "cid": {
+          "codigo": "G47.3",
+          "descricao": "Apneia de sono"
+        }
+      }
+    ]
+  },
+  "1444188": {
+    "numero": 1444188,
+    "dtConsulta": "2026-03-12T13:30:00Z",
+    "paciente": {
+      "prontuario": 20252763,
+      "nome": "DAIANE DA SILVA PONTES",
+      "dtNascimento": "1987-05-30T00:00:00Z",
+      "sexo": "F",
+      "nomeMae": "ANA DA SILVA PONTES",
+      "cpf": "999.000.111-44",
+      "cns": "799912345678914",
+      "enderecos": [
+        {
+          "logradouro": "Rua Canuto de Aguiar",
+          "nroLogradouro": 100,
+          "bairro": "Varjota",
+          "cidade": { "nome": "Fortaleza" },
+          "uf": { "sigla": "CE" },
+          "bclCloCep": 60175120
+        }
+      ],
+      "contatos": [
+        {
+          "ddd": 85,
+          "nroFone": "92233-4455"
+        }
+      ]
+    },
+    "grade": {
+      "especialidade": {
+        "nomeEspecialidade": "ENDOCRINOLOGIA"
+      },
+      "equipe": {
+        "nome": "EQUIPE DE ENDOCRINOLOGIA ADULTO"
+      },
+      "preceptor": {
+        "pessoa": {
+          "nome": "DRA. SIMONE LOPES"
+        }
+      }
+    },
+    "atendimentos": [
+      {
+        "seq": 1444188
+      }
+    ],
+    "anamneses": [
+      {
+        "itens": [
+          {
+            "descricao": "#HDA: Paciente com hipoparatiroidismo pós-cirúrgico.\n#EXAME FISICO: Ausência de parestesias no momento.\n#CONDUTA: Manter reposição de Cálcio e Vitamina D."
+          }
+        ]
+      }
+    ],
+    "cidsPrimarios": [
+      {
+        "cid": {
+          "codigo": "E20.9",
+          "descricao": "Hipoparatiroidismo não especificado"
+        }
+      }
+    ]
+  },
+  "1444206": {
+    "numero": 1444206,
+    "dtConsulta": "2026-03-12T14:45:00Z",
+    "paciente": {
+      "prontuario": 21817549,
+      "nome": "CAMILA VITORIA DA SILVA DE CASTRO",
+      "dtNascimento": "2002-12-05T00:00:00Z",
+      "sexo": "F",
+      "nomeMae": "CELINA DA SILVA DE CASTRO",
+      "cpf": "000.111.222-55",
+      "cns": "700012345678915",
+      "enderecos": [
+        {
+          "logradouro": "Rua Ana Bilhar",
+          "nroLogradouro": 333,
+          "bairro": "Meireles",
+          "cidade": { "nome": "Fortaleza" },
+          "uf": { "sigla": "CE" },
+          "bclCloCep": 60160110
+        }
+      ],
+      "contatos": [
+        {
+          "ddd": 85,
+          "nroFone": "90099-8877"
+        }
+      ]
+    },
+    "grade": {
+      "especialidade": {
+        "nomeEspecialidade": "PNEUMOLOGIA"
+      },
+      "equipe": {
+        "nome": "EQUIPE DE PNEUMOLOGIA PEDIÁTRICA"
+      },
+      "preceptor": {
+        "pessoa": {
+          "nome": "DRA. RENATA BARROS"
+        }
+      }
+    },
+    "atendimentos": [
+      {
+        "seq": 1444206
+      }
+    ],
+    "anamneses": [
+      {
+        "itens": [
+          {
+            "descricao": "#HDA: Paciente com diagnóstico de fibrose cística em acompanhamento.\n#EXAME FISICO: Baquetismo digital discreto, MV preservado.\n#CONDUTA: Mantido fisioterapia respiratória e enzimas pancreáticas."
+          }
+        ]
+      }
+    ],
+    "cidsPrimarios": [
+      {
+        "cid": {
+          "codigo": "E84.9",
+          "descricao": "Fibrose cística não especificada"
+        }
+      }
+    ]
+  }
+}
