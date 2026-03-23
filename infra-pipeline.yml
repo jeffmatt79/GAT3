@@ -1,0 +1,141 @@
+
+.job_base:
+  image: docker:24.0.7
+
+deploy_sql_hmg:
+  extends: .job_base
+  stage: deploy
+  script:
+    - docker compose -f docker-compose.hmg.yml up -d deploy_postgres_hmg --no-recreate
+    - docker ps -a
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "develop"'
+  tags: [homologation-runner]
+
+deploy_sql_prod:
+  extends: .job_base
+  stage: deploy
+  script:
+    - docker compose -f docker-compose.prod.yml up -d deploy_postgres_prod --no-recreate
+    - docker ps -a
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+  tags: [production-runner]
+
+
+deploy_api_hmg:
+  extends: .job_base
+  stage: deploy
+  before_script:
+    - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+  script:
+    - echo "API_PG_ADDR=$API_PG_ADDR"
+    - echo "POSTGRES_PASSWORD_HMG=$POSTGRES_PASSWORD_HMG"
+    - echo "POSTGRES_USER_HMG=$POSTGRES_USER_HMG"
+    - echo "AGHU_API_BASE_URL=$AGHU_API_BASE_URL"
+    - echo "AGHU_API_TOKEN=$AGHU_API_HMG_TOKEN"
+    - docker compose -f docker-compose.hmg.yml up -d deploy_backend --force-recreate
+    - docker ps -a
+  artifacts:
+    paths: 
+      - /docker/gat3-api/api.log
+  needs:
+    - deploy_sql_hmg
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "develop"'
+  tags: [homologation-runner]
+
+.deploy_api_prod:
+  extends: .job_base
+  stage: deploy
+  before_script:
+    - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+  script:
+    - docker compose -f docker-compose.prod.yml up -d deploy_backend --force-recreate
+    - docker ps -a
+  artifacts:
+    paths: 
+      - /docker/gat3-api/api.log
+  needs:
+    - deploy_sql_prod
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+  tags: [production-runner]
+
+# Job que sobe o Keycloak, depois que o Postgres já estiver up
+deploy_keycloak:
+  stage: deploy
+  script:
+    - |
+      if [ "$KEYCLOAK_FORCE_RECREATE" = "true" ]; then
+        echo "Forçando recriação do serviço keycloak..."
+        docker compose -f docker-compose.prod.yml up -d --force-recreate
+      else
+        echo "Iniciando serviço keycloak sem recriação forçadae com --no-recreate..."
+        docker compose -f docker-compose.prod.yml up -d --no-recreate
+      fi
+    - docker ps -a
+  needs:
+    - deploy_sql_prod
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+  tags: [homologation-runner]
+
+
+# Job que sobe o Keycloak, depois que o Postgres já estiver up
+deploy_keycloak_hmg:
+  stage: deploy
+  script:
+    - |
+      if [ "$KEYCLOAK_FORCE_RECREATE" = "true" ]; then
+        echo "Forçando recriação do serviço keycloak..."
+        docker compose -f docker-compose.hmg.yml up -d --force-recreate
+      else
+        echo "Iniciando serviço keycloak sem recriação forçadae com --no-recreate..."
+        docker compose -f docker-compose.hmg.yml up -d --no-recreate
+      fi
+    - docker ps -a
+  needs:
+    - deploy_sql_hmg
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "develop"'
+  tags: [homologation-runner]
+
+ # Job que sobe o Traefik
+deploy_traefik:
+  stage: deploy
+  variables:
+    TRAEFIK_FORCE_RECREATE: "true"
+  script:
+    - |
+      if [ "$TRAEFIK_FORCE_RECREATE" = "true" ]; then
+        echo "Forçando recriação do serviço traefik..."
+        mkdir -p /docker/traefik
+        docker compose -f docker-compose.prod.yml up -d --remove-orphans --force-recreate deploy_traefik
+      else
+        echo "Iniciando serviço traefik sem recriação forçadae com --no-recreate..."
+        docker compose -f docker-compose.prod.yml up -d --remove-orphans deploy_traefik
+      fi
+    - docker ps -a
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+  tags: [production-runner]
+
+deploy_traefik_hmg:
+  stage: deploy
+  variables:
+    TRAEFIK_FORCE_RECREATE: "true"
+  script:
+    - |
+      if [ "$TRAEFIK_FORCE_RECREATE" = "true" ]; then
+        echo "Forçando recriação do serviço traefik..."
+        mkdir -p /docker/traefik
+        docker compose -f docker-compose.hmg.yml up -d --remove-orphans --force-recreate deploy_traefik
+      else
+        echo "Iniciando serviço traefik sem recriação forçadae com --no-recreate..."
+        docker compose -f docker-compose.hmg.yml up -d --remove-orphans deploy_traefik
+      fi
+    - docker ps -a
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "develop"'
+  tags: [homologation-runner]

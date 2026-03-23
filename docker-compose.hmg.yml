@@ -1,0 +1,155 @@
+services:
+
+  deploy_postgres_hmg:
+    image: postgres:15
+    container_name: ${API_PG_ADDR} 
+    restart: always
+    networks:
+      - nginx
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD_HMG}
+      POSTGRES_USER: ${POSTGRES_USER_HMG}
+    ports:
+      - "5432:5432"
+    volumes:
+      - /docker/postgres-hmg:/var/lib/postgresql/data
+      
+
+  deploy_backend: 
+    image: $DOCKER_USER/$CI_PROJECT_NAME:$CI_COMMIT_SHA
+    container_name: api
+    restart: always
+    # ports:
+    #   - "8080:8080"
+    labels: 
+      - "traefik.enable=true"
+      
+      # ====================================================================
+      # 1. MIDDLEWARE: Redireciona a URL curta para o arquivo HTML
+      # ====================================================================
+      - "traefik.http.middlewares.swagger-redirect.redirectregex.regex=^https://hggat3\\.huwc\\.ufc\\.br/api/swagger-ui/?$$"
+      - "traefik.http.middlewares.swagger-redirect.redirectregex.replacement=https://hggat3.huwc.ufc.br/api/swagger-ui/index.html"
+      - "traefik.http.middlewares.swagger-redirect.redirectregex.permanent=true" # Usa 301 Moved Permanently
+
+      # ====================================================================
+      # 2. ROUTER A (Redirecionamento): Captura a URL base curta (Prioridade 200)
+      # ====================================================================
+      - "traefik.http.routers.swagger-redir-router.rule=Host(`hggat3.huwc.ufc.br`) && Path(`/api/swagger-ui`) || Path(`/api/swagger-ui/`)"
+      - "traefik.http.routers.swagger-redir-router.entrypoints=websecure"
+      - "traefik.http.routers.swagger-redir-router.tls=true"
+      - "traefik.http.routers.swagger-redir-router.middlewares=swagger-redirect"
+      - "traefik.http.routers.swagger-redir-router.priority=200"
+
+      # ====================================================================
+      # 3. ROUTER B (Principal): Roteia o tráfego da API (Prioridade 100)
+      # ====================================================================
+      - "traefik.http.routers.api-router.rule=Host(`hggat3.huwc.ufc.br`) && PathPrefix(`/api`)"
+      - "traefik.http.routers.api-router.entrypoints=websecure"
+      - "traefik.http.routers.api-router.tls=true"
+      - "traefik.http.routers.api-router.priority=100" 
+      
+      # 4. SERVIÇO: Destino interno
+      - "traefik.http.services.api-service.loadbalancer.server.port=8080"
+      - "traefik.http.services.api-service.loadbalancer.server.scheme=http"
+    networks:
+      - nginx
+    environment:
+      API_PG_ADDR: ${API_PG_ADDR} 
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD_HMG}
+      POSTGRES_USER: ${POSTGRES_USER_HMG}
+      SPRING_PROFILES_ACTIVE: hmg
+      AGHU_API_BASE_URL: ${AGHU_API_BASE_URL}
+      AGHU_API_TOKEN: ${AGHU_API_HMG_TOKEN}
+    volumes:
+      - /docker/gat3-api:/opt/api
+      
+    depends_on:
+      - deploy_postgres_hmg
+
+  deploy_keycloak: 
+    image: quay.io/keycloak/keycloak:24.0.4
+    container_name: keycloak
+    restart: unless-stopped
+    networks:
+      - nginx
+    environment:
+      - KEYCLOAK_ADMIN=${KC_ADMIN_USER_HMG}
+      - KEYCLOAK_ADMIN_PASSWORD=${KC_ADMIN_PASSWORD_HMG}
+      - KC_DB=${KC_DB}
+      - KC_DB_URL_HOST=${KC_DB_URL_HOST}
+      - KC_DB_URL_DATABASE=${KC_DB_URL_DATABASE}
+      - KC_DB_USERNAME=${KC_DB_USERNAME}
+      - KC_DB_PASSWORD=${KC_DB_PASSWORD_HMG}
+    ports:
+      - "8080:8080"
+    labels: 
+      - "traefik.enable=true"
+      - "traefik.http.routers.keycloak.rule=Host(`hggat3.huwc.ufc.br`) && PathPrefix(`/auth`)"
+      - "traefik.http.routers.keycloak.tls=true"
+      - "traefik.http.routers.keycloak.entrypoints=websecure"
+      - "traefik.http.services.keycloak.loadbalancer.server.port=8080"
+    volumes:
+      - /docker/keycloak:/opt/keycloak/data
+    command: 
+      - start
+      - "--hostname=hggat3.huwc.ufc.br" 
+      - "--proxy=edge"
+      - "--http-relative-path=/auth"
+    depends_on:
+      - deploy_postgres_hmg
+
+  deploy_traefik: 
+    image: traefik:v2.11
+    container_name: traefik
+    restart: always
+    networks:
+      - nginx
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8090:8080"
+    command:
+      - "--log.level=DEBUG" 
+
+      # API e Dashboard
+      - "--api.dashboard=true"
+      - "--api.insecure=true" 
+      
+      # Provedores (Providers)
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--providers.docker.network=nginx"                # Garantir que ele olhe para sua rede
+
+      # EntryPoints
+      - "--entryPoints.web.address=:80"
+      - "--entryPoints.websecure.address=:443"
+      - "--entryPoints.traefik.address=:8080"             # Para o dashboard na 8090:8080
+      
+      # Configuração para o Traefik confiar nos cabeçalhos encaminhados (necessário atrás de proxy)
+      - "--entryPoints.web.forwardedHeaders.insecure=true"
+      - "--entryPoints.websecure.forwardedHeaders.insecure=true"
+
+      # Logs
+      - "--accesslog=true"
+      - "--accesslog.filepath=/var/log/traefik/access.log"
+      - "--log.level=DEBUG"
+
+      # Provedor de arquivos, apontando apenas para o arquivo de certificado (configuração dinâmica)
+      - "--providers.file.filename=/certs/tls.yml" # <- Assumindo que você renomeou
+      - "--providers.file.watch=true"
+
+      # Opcional: Redirecionamento HTTP -> HTTPS (Middleware)
+      - "--entrypoints.web.http.redirections.entrypoint.to=websecure"
+      - "--entrypoints.web.http.redirections.entrypoint.scheme=https"
+    volumes:
+      - /docker/traefik/logs:/var/log/traefik             # Mapeia um diretório local 'logs' para o contêiner
+      - "/docker/traefik:/opt/traefik"                 # monta todo o diretório de config
+      - "/docker/traefik/certs:/certs"                 # certificados
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"    # provider Docker
+    depends_on:
+      - deploy_keycloak
+
+networks:
+  nginx:
+    external: true
+  
