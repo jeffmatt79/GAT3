@@ -36,6 +36,9 @@
 			**/DevSecurityConfig.java
     	</sonar.coverage.exclusions>
 		<sonar.coverage.jacoco.xmlReportPaths>target/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
+		
+  <sonar.organization>jeffmatt79</sonar.organization>
+
 	</properties>
 
 	<dependencies>
